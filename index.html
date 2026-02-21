@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corpo Forte, Reprodução Saudável</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#0f5132,#198754);
+    color:white;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:40px 0;
+}
+
+.hero img{
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.hero-text{
+    flex:1;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.highlight{
+    color:#ffd700;
+}
+
+.price-box{
+    background:white;
+    color:#000;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+    font-size:18px;
+}
+
+.new-price{
+    font-size:34px;
+    color:#d60000;
+    font-weight:bold;
+}
+
+.button{
+    display:inline-block;
+    background:#ff8c00;
+    color:white;
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#e67600;
+}
+
+.section{
+    padding:50px 0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    color:#000;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#0b3d25;
+}
+
+.counter{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+    color:#ff0000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+    <img src="livro.jpg" alt="Capa do Livro">
+
+    <div class="hero-text">
+        <h1>Corpo Forte, <span class="highlight">Reprodução Saudável</span></h1>
+        <p>Aprenda técnicas práticas para melhorar a saúde e reprodução de suínos e aves, aumentando sua produção e seus lucros.</p>
+
+        <div class="price-box">
+            <div class="old-price">Preço normal: 4.817 Kz</div>
+            <div class="new-price">Hoje: 2.999 Kz</div>
+            <div class="counter" id="contador"></div>
+
+            <a href="https://wa.me/244959622160" class="button">Quero Garantir Minha Vaga</a>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>📘 O que você vai aprender:</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Reprodução Eficiente</h3>
+            <p>Técnicas para melhorar fertilidade e taxa de nascimento.</p>
+        </div>
+        <div class="card">
+            <h3>Alimentação Estratégica</h3>
+            <p>Como alimentar corretamente para máximo desempenho.</p>
+        </div>
+        <div class="card">
+            <h3>Prevenção de Doenças</h3>
+            <p>Evite perdas e aumente a produtividade.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>🔥 Para quem é este livro?</h2>
+    <div class="cards">
+        <div class="card">Criadores de porcos</div>
+        <div class="card">Avicultores</div>
+        <div class="card">Empreendedores rurais</div>
+        <div class="card">Quem deseja aumentar lucros na produção animal</div>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 - MultSev Solução Digital
+</div>
+
+<script>
+let vagas = 15;
+
+function atualizarContador(){
+    let contador = document.getElementById("contador");
+
+    if(vagas > 0){
+        contador.innerHTML = "⚠ Restam apenas " + vagas + " vagas promocionais!";
+    }else{
+        contador.innerHTML = "Promoção encerrada!";
+    }
+}
+
+atualizarContador();
+</script>
+
+</body>
+</html>
