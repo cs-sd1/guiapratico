@@ -1,252 +1,314 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!-- ===================== LANDING PAGE PROFISSIONAL DE ALTA CONVERSÃO ===================== --><!DOCTYPE html><html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corpo Forte, Reprodução Saudável</title>
-
+<title>CyberSev Solução Digital</title>
 <style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#0f5132,#198754);
-    color:white;
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f7f4;color:#222}
+header{background:#1B5E20;color:white;padding:30px;text-align:center}
+.logo img {
+    width: 180px; /* podes aumentar se quiser */
+    display: block;
+    margin: 0 auto;
+}
+.hero{background:url('campo.jpg') center/cover no-repeat;height:500px;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+.hero h1{background:rgba(0,0,0,0.65);padding:25px;border-radius:12px;font-size:34px;max-width:800px}
+.section{padding:50px 20px;max-width:1100px;margin:auto}
+.card{background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.1);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+button{background:#4CAF50;color:white;border:none;padding:15px 30px;border-radius:8px;font-size:18px;cursor:pointer}
+button:hover{background:#2E7D32}
+.cta{background:#2E7D32;color:white;text-align:center;padding:40px;border-radius:15px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:18px;border-radius:50%;font-size:22px;text-decoration:none}
+footer{background:#1B5E20;color:white;text-align:center;padding:30px;margin-top:40px}
+img{width:100%;border-radius:12px}
+
+.prints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
+.prints img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.hero{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    padding:40px 0;
+.prints img:hover {
+    transform: scale(1.05);
 }
 
-.hero img{
-    max-width:400px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+.audios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.hero-text{
-    flex:1;
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.stats {
+    text-align: center;
 }
 
-h1{
-    font-size:42px;
-    margin-bottom:10px;
+.stat {
+    margin: 15px 0;
 }
 
-.highlight{
-    color:#ffd700;
+.stat h3 {
+    font-size: 28px;
+    color: #2e7d32; /* verde campo */
+    margin-bottom: 5px;
 }
 
-.price-box{
-    background:white;
-    color:#000;
-    padding:25px;
-    border-radius:15px;
-    margin-top:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+.stat p {
+    font-size: 14px;
+    color: #555;
+}
+.final-cta {
+    text-align: center;
 }
 
-.old-price{
-    text-decoration:line-through;
-    color:#888;
-    font-size:18px;
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
-.new-price{
-    font-size:34px;
-    color:#d60000;
-    font-weight:bold;
+/* Hover (quando passa o dedo/mouse) */
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-.button{
-    display:inline-block;
-    background:#ff8c00;
-    color:white;
-    padding:15px 30px;
-    border-radius:8px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    margin-top:15px;
-    transition:0.3s;
+/* Clique */
+.btn-whatsapp:active {
+    transform: scale(0.97);
+}
+.btn-whatsapp {
+    animation: pulse 2s infinite;
 }
 
-.button:hover{
-    background:#e67600;
-}
-
-.section{
-    padding:50px 0;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    color:#000;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.footer{
-    text-align:center;
-    padding:20px;
-    background:#0b3d25;
-}
-
-.counter{
-    font-size:20px;
-    font-weight:bold;
-    margin-top:10px;
-    color:#ff0000;
-}
-/* RESPONSIVO PARA CELULAR */
-@media (max-width:768px){
-
-    .hero{
-        flex-direction:column;
-        text-align:center;
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102, 0.6);
     }
-
-    .hero img{
-        width:100%;
-        max-width:280px;
-        margin:auto;
+    70% {
+        box-shadow: 0 0 0 15px rgba(37,211,102, 0);
     }
-
-    h1{
-        font-size:28px;
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102, 0);
     }
-
-    .new-price{
-        font-size:26px;
-    }
-
-}
-.final-cta{
-    background:#ffffff;
-    color:#000;
-    padding:60px 20px;
-    text-align:center;
-    border-radius:20px;
-    margin:40px 0;
-}
-
-.button-final{
-    display:inline-block;
-    background:#ff3c00;
-    color:white;
-    padding:18px 40px;
-    border-radius:10px;
-    text-decoration:none;
-    font-size:20px;
-    font-weight:bold;
-    margin-top:20px;
-    transition:0.3s;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-.button-final:hover{
-    background:#d63000;
-    transform:scale(1.05);
 }
 </style>
 </head>
+<body><header>
+<div class="logo">
+    <img src="logo2.png" alt="CyberSev Solução Digital">
+</div>
+<p>Conhecimento que gera resultados</p>
+</header><section class="hero">
+<h1>Descubra como aumentar sua produção animal e evitar prejuízos com métodos comprovados</h1>
+</section><section class="section">
+<div class="card">
+<h2>🚨 Você está perdendo dinheiro sem perceber</h2>
+<p>Muitos criadores cometem erros simples que reduzem drasticamente os lucros. Falta de conhecimento técnico é o maior problema.</p>
+</div>
+</section><section class="section grid">
+<div class="card">
+<h3>🐖 Engorda eficiente</h3>
+<p>Aprenda como acelerar o crescimento dos seus animais.</p>
+</div>
+<div class="card">
+<h3>🐄 Produção máxima</h3>
+<p>Melhore a alimentação e aumente resultados.</p>
+</div>
+<div class="card">
+<h3>🐓 Reprodução saudável</h3>
+<p>Evite perdas e aumente sua criação.</p>
+</div>
+</section><section class="section">
+<div class="card">
+<h2>📘 Corpo Forte, Reprodução Saudável</h2>
+<img src="livro1.jpg">
+<p>Um único livro com duas edições completas que ensinam passo a passo como transformar sua criação em um negócio lucrativo.</p>
+<ul>
+<li>✔ Técnicas práticas</li>
+<li>✔ Fácil aplicação</li>
+<li>✔ Resultados reais</li>
+</ul>
+<button onclick="window.open('https://wa.me/244959622160')">Comprar Agora no WhatsApp</button>
+</div>
+</section><section class="section">
+<div class="card">
+    <h2>💬 O que dizem os criadores</h2>
 
-<body>
+    <p>“Depois desse material, minha produção dobrou!”</p>
+    <p>“Agora sei exatamente o que fazer para lucrar.”</p>
+    <!-- ================= AUDIOS ================= -->
+    <h3 style="margin-top:20px;">🔊 Depoimentos em áudio</h3>
+<div class="audios">
+    <audio controls controlsList="nodownload">
+        <source src="audio3.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
 
-<div class="container">
+    <audio controls controlsList="nodownload">
+        <source src="audio1.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
 
-<div class="hero">
-    <img src="livro.jpg" alt="Capa do Livro">
+    <audio controls controlsList="nodownload">
+        <source src="audio2.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+</div>
 
-    <div class="hero-text">
-        <h1>Corpo Forte, <span class="highlight">Reprodução Saudável</span></h1>
-        <p>Aprenda técnicas práticas para melhorar a saúde e reprodução de suínos e aves, aumentando sua produção e seus lucros.</p>
+    <!-- ================= PRINTS ================= -->
+    <h3 style="margin-top:20px;">📸 Comprovativos reais</h3>
 
-        <div class="price-box">
-            <div class="old-price">Preço normal: 4.817 Kz</div>
-            <div class="new-price">Hoje: 1.999 Kz</div>
-            <div class="counter" id="contador"></div>
+    <div class="prints">
+        <img src="print1.jpg" alt="comprovativo">
+        <img src="print2.jpg" alt="comprovativo">
+        <img src="print3.jpg" alt="comprovativo">
+        <img src="print4.jpg" alt="comprovativo">
+        <img src="print5.jpg" alt="comprovativo">
+        <img src="print6.jpg" alt="comprovativo">
+        <img src="print7.jpg" alt="comprovativo">
+        <img src="print8.jpg" alt="comprovativo">
+        <img src="print9.jpg" alt="comprovativo">
+        <img src="print10.jpg" alt="comprovativo">
+    </div>
 
-            <a href="https://wa.me/244959622160?text=Quero%20garantir%20a%20oferta%20do%20livro%20pagando%20apenas%201.999%20kz." class="button">Quero Garantir Minha Vaga</a>
-        </div>
+</div>
+</section>
+<div class="card stats" id="stats">
+    <h2>📊 Resultados dos Criadores</h2>
+
+    <div class="stat">
+        <h3><span class="counter" data-target="87">0</span>%</h3>
+        <p>Aumento médio na produção (%)</p>
+    </div>
+
+    <div class="stat">
+        <h3 class="counter" data-target="9">0</h3>
+        <p>Criadores em cada 10 têm resultados</p>
+    </div>
+
+    <div class="stat">
+        <h3 class="counter" data-target="120">0</h3>
+        <p>Criadores que já aplicaram</p>
     </div>
 </div>
-
-<div class="section">
-    <h2>📘 O que você vai aprender:</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Reprodução Eficiente</h3>
-            <p>Técnicas para melhorar fertilidade e taxa de nascimento.</p>
-        </div>
-        <div class="card">
-            <h3>Alimentação Estratégica</h3>
-            <p>Como alimentar corretamente para máximo desempenho.</p>
-        </div>
-        <div class="card">
-            <h3>Prevenção de Doenças</h3>
-            <p>Evite perdas e aumente a produtividade.</p>
-        </div>
-    </div>
+<section class="section">
+<div class="cta">
+<h2>🔥 Oferta por tempo limitado</h2>
+<p>Garanta agora e comece a aplicar hoje mesmo</p>
+<button onclick="window.open('https://wa.me/244959622160')">QUERO MEU LIVRO AGORA</button>
 </div>
+</section><a class="whatsapp" href="https://wa.me/244959622160">💬</a>
+<div class="card">
+<h2>❓ Perguntas Frequentes</h2>
 
-<div class="section">
-    <h2>🔥 Para quem é este livro?</h2>
-    <div class="cards">
-        <div class="card">Criadores de porcos</div>
-        <div class="card">Avicultores</div>
-        <div class="card">Empreendedores rurais</div>
-        <div class="card">Quem deseja aumentar lucros na produção animal</div>
-    </div>
+<p><strong>Como recebo o material?</strong><br>Após pagamento, envio imediato no WhatsApp.</p>
+
+<p><strong>Funciona para iniciantes?</strong><br>Sim, foi feito para quem está começando.</p>
+
+<p><strong>Preciso de experiência?</strong><br>Não, o método é passo a passo.</p>
 </div>
-
+<div class="card">
+<h2>👤 Sobre o Autor</h2>
+<p>Especialista em produção animal, ajudando criadores a aumentarem seus lucros com métodos práticos e comprovados.</p>
 </div>
+<div class="card final-cta">
+    <h2>🚀 Comece hoje mesmo</h2>
+    <p>Não perca mais tempo e dinheiro. Comece agora a transformar sua produção.</p>
 
-<div class="final-cta">
-    <h2>Não perca esta oportunidade!</h2>
-    <p>Garanta agora o preço promocional antes que as 15 vagas terminem.</p>
-    <a href="https://wa.me/244959622160?text=Quero%20garantir%20a%20oferta%20do%20livro%20pagando%20apenas%201.999%20kz." class="button-final">
-        GARANTIR MINHA VAGA AGORA
+    <a href="https://wa.me/244959622160" class="btn-whatsapp">
+        📲 Falar no WhatsApp
     </a>
 </div>
-
-<div class="footer">
-© 2026 - MultSev Solução Digital
-</div>
-
+<footer>
+<p>© 2026 CyberSev Solução Digital</p>
+<p>Site criado por João Sacassole</p>
+<p>Contato do Dev: 934919736</p>
+</footer>
 <script>
-let vagas = 15;
+const audios = document.querySelectorAll(".audios audio");
 
-function atualizarContador(){
-    let contador = document.getElementById("contador");
+audios.forEach((audio, index) => {
 
-    if(vagas > 0){
-        contador.innerHTML = "⚠ Restam apenas " + vagas + " vagas promocionais!";
-    }else{
-        contador.innerHTML = "Promoção encerrada!";
-    }
+    // Quando um tocar → parar os outros
+    audio.addEventListener("play", () => {
+        audios.forEach(other => {
+            if (other !== audio) {
+                other.pause();
+                other.currentTime = 0;
+            }
+        });
+    });
+
+    // Quando terminar → tocar o próximo
+    audio.addEventListener("ended", () => {
+        if (index + 1 < audios.length) {
+            audios[index + 1].play();
+        }
+    });
+
+});
+
+const counters = document.querySelectorAll('.counter');
+let started = false;
+
+function startCounting() {
+    counters.forEach(counter => {
+        const update = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText;
+
+            const increment = target / 50;
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(update, 30);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        update();
+    });
 }
 
-atualizarContador();
-</script>
+// Detectar quando aparece na tela
+window.addEventListener('scroll', () => {
+    const section = document.getElementById('stats');
+    const position = section.getBoundingClientRect().top;
+    const screen = window.innerHeight;
 
+    if (position < screen && !started) {
+        started = true;
+        startCounting();
+    }
+});
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+</script>
 </body>
 </html>
