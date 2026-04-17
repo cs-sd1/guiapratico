@@ -1,314 +1,1373 @@
-<!-- ===================== LANDING PAGE PROFISSIONAL DE ALTA CONVERSÃO ===================== --><!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyberSev Solução Digital</title>
+<title>Guia Prático de Agricultura para o Produtor Angolano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f7f4;color:#222}
-header{background:#1B5E20;color:white;padding:30px;text-align:center}
-.logo img {
-    width: 180px; /* podes aumentar se quiser */
-    display: block;
-    margin: 0 auto;
-}
-.hero{background:url('campo.jpg') center/cover no-repeat;height:500px;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
-.hero h1{background:rgba(0,0,0,0.65);padding:25px;border-radius:12px;font-size:34px;max-width:800px}
-.section{padding:50px 20px;max-width:1100px;margin:auto}
-.card{background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.1);margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-button{background:#4CAF50;color:white;border:none;padding:15px 30px;border-radius:8px;font-size:18px;cursor:pointer}
-button:hover{background:#2E7D32}
-.cta{background:#2E7D32;color:white;text-align:center;padding:40px;border-radius:15px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:18px;border-radius:50%;font-size:22px;text-decoration:none}
-footer{background:#1B5E20;color:white;text-align:center;padding:30px;margin-top:40px}
-img{width:100%;border-radius:12px}
+  :root {
+    --terra: #8B4513;
+    --terra-light: #C4721A;
+    --ouro: #D4A017;
+    --ouro-light: #F0C040;
+    --verde: #2D5016;
+    --verde-mid: #4A7C28;
+    --verde-light: #6FAF3A;
+    --creme: #FAF3E0;
+    --creme-dark: #EDE0C4;
+    --marrom: #3D2B1F;
+    --cinza-texto: #2C2018;
+    --bege: #F5ECD7;
+  }
 
-.prints {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.prints img {
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
+  body {
+    background-color: var(--creme);
+    color: var(--cinza-texto);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.85;
+  }
 
-.prints img:hover {
-    transform: scale(1.05);
-}
-
-.audios {
+  /* CAPA */
+  .capa {
+    background: linear-gradient(160deg, var(--verde) 0%, #1a3a08 40%, var(--terra) 100%);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-.stats {
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
 
-.stat {
-    margin: 15px 0;
-}
+  .capa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(212,160,23,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(111,175,58,0.12) 0%, transparent 50%);
+  }
 
-.stat h3 {
-    font-size: 28px;
-    color: #2e7d32; /* verde campo */
-    margin-bottom: 5px;
-}
-
-.stat p {
-    font-size: 14px;
-    color: #555;
-}
-.final-cta {
-    text-align: center;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 14px 28px;
-    font-size: 16px;
+  .capa-badge {
+    background: var(--ouro);
+    color: var(--marrom);
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
     font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .capa h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 80px);
+    font-weight: 900;
     color: #fff;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
+    line-height: 1.1;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 900px;
+  }
 
-/* Hover (quando passa o dedo/mouse) */
-.btn-whatsapp:hover {
+  .capa h1 span {
+    color: var(--ouro-light);
+  }
+
+  .capa-sub {
+    font-size: 20px;
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    margin-bottom: 60px;
+    font-style: italic;
+    position: relative;
+  }
+
+  .capa-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--ouro);
+    margin: 30px auto;
+    position: relative;
+  }
+
+  .capa-meta {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .capa-meta-item {
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .capa-meta-item strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--ouro-light);
+    font-weight: 700;
+  }
+
+  /* LAYOUT PRINCIPAL */
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  /* SUMÁRIO */
+  .sumario {
+    background: var(--marrom);
+    color: #fff;
+    padding: 70px 0;
+  }
+
+  .sumario .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .sumario-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ouro);
+    margin-bottom: 30px;
+  }
+
+  .sumario h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  .sumario-desc {
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+
+  .sumario-lista {
+    list-style: none;
+  }
+
+  .sumario-lista li {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    cursor: default;
+    transition: color 0.2s;
+  }
+
+  .sumario-lista li:hover { color: var(--ouro-light); }
+
+  .sumario-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    color: var(--ouro);
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    width: 28px;
+  }
+
+  /* SECÇÕES */
+  .secao {
+    padding: 90px 0;
+    border-bottom: 1px solid var(--creme-dark);
+  }
+
+  .secao:nth-child(even) {
+    background: var(--bege);
+  }
+
+  .secao-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(139,69,19,0.08);
+    line-height: 1;
+    margin-bottom: -30px;
+    display: block;
+  }
+
+  .secao-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terra-light);
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .secao h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    color: var(--verde);
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .secao-intro {
+    font-size: 18px;
+    color: var(--terra);
+    font-style: italic;
+    margin-bottom: 40px;
+    padding-left: 24px;
+    border-left: 4px solid var(--ouro);
+    line-height: 1.7;
+  }
+
+  /* CARDS DE PRODUTO */
+  .produtos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .produto-card {
+    background: #fff;
+    border-radius: 4px;
+    padding: 28px;
+    border-left: 5px solid var(--verde-mid);
+    box-shadow: 0 2px 12px rgba(45,80,22,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .produto-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+    box-shadow: 0 8px 24px rgba(45,80,22,0.15);
+  }
 
-/* Clique */
-.btn-whatsapp:active {
-    transform: scale(0.97);
-}
-.btn-whatsapp {
-    animation: pulse 2s infinite;
-}
+  .produto-card:nth-child(2n) { border-left-color: var(--terra-light); }
+  .produto-card:nth-child(3n) { border-left-color: var(--ouro); }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37,211,102, 0.6);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37,211,102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37,211,102, 0);
-    }
-}
+  .produto-rank {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--verde-light);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .produto-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--marrom);
+    margin-bottom: 8px;
+  }
+
+  .produto-lucro {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+
+  .produto-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  /* TABELA CALENDÁRIO */
+  .tabela-wrapper {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead tr {
+    background: var(--verde);
+    color: #fff;
+  }
+
+  thead th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  tbody tr { background: #fff; }
+  tbody tr:nth-child(even) { background: var(--creme); }
+
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--creme-dark);
+    line-height: 1.5;
+  }
+
+  tbody td:first-child {
+    font-weight: 600;
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .mes-chuva { background: rgba(111,175,58,0.25) !important; font-weight: 600; }
+  .mes-seco { background: rgba(212,160,23,0.2) !important; }
+
+  /* CAIXAS DE DESTAQUE */
+  .destaque-box {
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-mid) 100%);
+    color: #fff;
+    padding: 36px 40px;
+    border-radius: 4px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .destaque-box::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    color: rgba(255,255,255,0.06);
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    line-height: 1;
+  }
+
+  .destaque-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: var(--ouro-light);
+  }
+
+  .destaque-box p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* CASO REAL */
+  .caso-real {
+    background: var(--marrom);
+    color: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    margin: 50px 0;
+    position: relative;
+  }
+
+  .caso-real-badge {
+    background: var(--ouro);
+    color: var(--marrom);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .caso-real h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--ouro-light);
+    margin-bottom: 16px;
+  }
+
+  .caso-real p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 14px;
+  }
+
+  .caso-real-numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .caso-num {
+    text-align: center;
+  }
+
+  .caso-num strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--ouro-light);
+    margin-bottom: 4px;
+  }
+
+  .caso-num span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.5px;
+  }
+
+  /* STEPS / TÉCNICAS */
+  .steps {
+    counter-reset: step;
+    margin: 30px 0;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: start;
+  }
+
+  .step-num {
+    counter-increment: step;
+    width: 56px;
+    height: 56px;
+    background: var(--terra);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--verde);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .step-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  /* FINANCEIRO */
+  .financeiro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .financeiro-card {
+    padding: 32px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .financeiro-card.investimento {
+    background: #fff;
+    border: 2px solid var(--terra-light);
+  }
+
+  .financeiro-card.retorno {
+    background: var(--verde);
+    color: #fff;
+  }
+
+  .financeiro-card h3 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  .financeiro-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .financeiro-card.investimento .financeiro-valor { color: var(--terra); }
+  .financeiro-card.retorno .financeiro-valor { color: var(--ouro-light); }
+
+  .financeiro-sub {
+    font-size: 13px;
+    opacity: 0.65;
+  }
+
+  /* LISTA ESTILIZADA */
+  .lista-custom {
+    list-style: none;
+    margin: 24px 0;
+  }
+
+  .lista-custom li {
+    padding: 10px 0 10px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--creme-dark);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .lista-custom li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--terra-light);
+    font-weight: 700;
+  }
+
+  .lista-custom li strong { color: var(--verde); }
+
+  /* ALERTA / DICA */
+  .dica {
+    background: rgba(212,160,23,0.12);
+    border-left: 4px solid var(--ouro);
+    padding: 20px 24px;
+    margin: 28px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .dica-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .dica p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--marrom);
+  }
+
+  /* REGIÕES */
+  .regioes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 36px 0;
+  }
+
+  .regiao-card {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .regiao-header {
+    padding: 20px 24px;
+    color: #fff;
+  }
+
+  .regiao-card:nth-child(1) .regiao-header { background: var(--verde); }
+  .regiao-card:nth-child(2) .regiao-header { background: var(--terra); }
+  .regiao-card:nth-child(3) .regiao-header { background: #7A4F00; }
+  .regiao-card:nth-child(4) .regiao-header { background: #3D6B8E; }
+
+  .regiao-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .regiao-header p {
+    font-size: 12px;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+  }
+
+  .regiao-body {
+    background: #fff;
+    padding: 20px 24px;
+  }
+
+  .regiao-body p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 12px;
+    color: #444;
+  }
+
+  .regiao-tag {
+    display: inline-block;
+    background: var(--creme-dark);
+    color: var(--marrom);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 2px 3px 2px 0;
+    font-weight: 600;
+  }
+
+  /* RODAPÉ */
+  footer {
+    background: var(--marrom);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 50px 30px;
+    font-size: 13px;
+  }
+
+  footer strong { color: var(--ouro); }
+
+  /* UTILS */
+  .mt-30 { margin-top: 30px; }
+  .mb-30 { margin-bottom: 30px; }
+
+  h3.subsecao {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--terra);
+    margin: 40px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--creme-dark);
+  }
+
+  p { margin-bottom: 16px; }
+
+  @media (max-width: 700px) {
+    .sumario .container { grid-template-columns: 1fr; }
+    .produtos-grid { grid-template-columns: 1fr; }
+    .financeiro-grid { grid-template-columns: 1fr; }
+    .regioes-grid { grid-template-columns: 1fr; }
+    .caso-real-numeros { grid-template-columns: 1fr 1fr; }
+    .capa h1 { font-size: 38px; }
+    .step { grid-template-columns: 44px 1fr; gap: 16px; }
+  }
 </style>
 </head>
-<body><header>
-<div class="logo">
-    <img src="logo2.png" alt="CyberSev Solução Digital">
-</div>
-<p>Conhecimento que gera resultados</p>
-</header><section class="hero">
-<h1>Descubra como aumentar sua produção animal e evitar prejuízos com métodos comprovados</h1>
-</section><section class="section">
-<div class="card">
-<h2>🚨 Você está perdendo dinheiro sem perceber</h2>
-<p>Muitos criadores cometem erros simples que reduzem drasticamente os lucros. Falta de conhecimento técnico é o maior problema.</p>
-</div>
-</section><section class="section grid">
-<div class="card">
-<h3>🐖 Engorda eficiente</h3>
-<p>Aprenda como acelerar o crescimento dos seus animais.</p>
-</div>
-<div class="card">
-<h3>🐄 Produção máxima</h3>
-<p>Melhore a alimentação e aumente resultados.</p>
-</div>
-<div class="card">
-<h3>🐓 Reprodução saudável</h3>
-<p>Evite perdas e aumente sua criação.</p>
-</div>
-</section><section class="section">
-<div class="card">
-<h2>📘 Corpo Forte, Reprodução Saudável</h2>
-<img src="livro1.jpg">
-<p>Um único livro com duas edições completas que ensinam passo a passo como transformar sua criação em um negócio lucrativo.</p>
-<ul>
-<li>✔ Técnicas práticas</li>
-<li>✔ Fácil aplicação</li>
-<li>✔ Resultados reais</li>
-</ul>
-<button onclick="window.open('https://wa.me/244959622160')">Comprar Agora no WhatsApp</button>
-</div>
-</section><section class="section">
-<div class="card">
-    <h2>💬 O que dizem os criadores</h2>
+<body>
 
-    <p>“Depois desse material, minha produção dobrou!”</p>
-    <p>“Agora sei exatamente o que fazer para lucrar.”</p>
-    <!-- ================= AUDIOS ================= -->
-    <h3 style="margin-top:20px;">🔊 Depoimentos em áudio</h3>
-<div class="audios">
-    <audio controls controlsList="nodownload">
-        <source src="audio3.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
+<!-- CAPA -->
+<section class="capa">
+  <div class="capa-badge">Guia Prático · Edição 2026</div>
+  <h1>Agricultura Lucrativa <span>para o Produtor Angolano</span></h1>
+  <p class="capa-sub">Um guia completo, directo e profundo para quem cultiva a terra em Angola — da semente à venda.</p>
+  <p class="capa-sub"><strong>CyberSev Solução Digital</strong></p>
+  <div class="capa-divider"></div>
+  <div class="capa-meta">
+    <div class="capa-meta-item"><strong>9</strong>capítulos completos</div>
+    <div class="capa-meta-item"><strong>4</strong>regiões de Angola</div>
+    <div class="capa-meta-item"><strong>10</strong>culturas lucrativas</div>
+    <div class="capa-meta-item"><strong>Kz</strong>valores reais</div>
+  </div>
+</section>
 
-    <audio controls controlsList="nodownload">
-        <source src="audio1.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-
-    <audio controls controlsList="nodownload">
-        <source src="audio2.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-</div>
-
-    <!-- ================= PRINTS ================= -->
-    <h3 style="margin-top:20px;">📸 Comprovativos reais</h3>
-
-    <div class="prints">
-        <img src="print1.jpg" alt="comprovativo">
-        <img src="print2.jpg" alt="comprovativo">
-        <img src="print3.jpg" alt="comprovativo">
-        <img src="print4.jpg" alt="comprovativo">
-        <img src="print5.jpg" alt="comprovativo">
-        <img src="print6.jpg" alt="comprovativo">
-        <img src="print7.jpg" alt="comprovativo">
-        <img src="print8.jpg" alt="comprovativo">
-        <img src="print9.jpg" alt="comprovativo">
-        <img src="print10.jpg" alt="comprovativo">
+<!-- SUMÁRIO -->
+<section class="sumario">
+  <div class="container">
+    <div>
+      <p class="sumario-titulo">Índice do Guia</p>
+      <h2>O que você vai encontrar aqui</h2>
+      <p class="sumario-desc">Este guia foi pensado para o produtor angolano que quer crescer com o que tem — terra, mãos e conhecimento. Sem teorias complicadas. Só prática.</p>
     </div>
+    <ul class="sumario-lista">
+      <li><span class="sumario-num">01</span> Os 10 alimentos mais lucrativos para cultivar</li>
+      <li><span class="sumario-num">02</span> Calendário agrícola por região</li>
+      <li><span class="sumario-num">03</span> Preparo do solo sem maquinário pesado</li>
+      <li><span class="sumario-num">04</span> Sistema de irrigação simples para época seca</li>
+      <li><span class="sumario-num">05</span> Protecção contra pragas com métodos naturais</li>
+      <li><span class="sumario-num">06</span> Investimento e retorno por hectare em Kwanzas</li>
+      <li><span class="sumario-num">07</span> Armazenamento correcto da colheita</li>
+      <li><span class="sumario-num">08</span> Onde e como vender: mercados e exportação</li>
+      <li><span class="sumario-num">09</span> Programas do governo angolano — como aceder</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- SECÇÃO 1: OS 10 ALIMENTOS -->
+<section class="secao" id="s1">
+<div class="container">
+  <span class="secao-numero">01</span>
+  <span class="secao-label">Capítulo Um</span>
+  <h2>Os 10 Alimentos Mais Lucrativos para Cultivar em Angola</h2>
+
+  <p class="secao-intro">A escolha certa da cultura pode triplicar o seu rendimento por hectare. Aqui estão os 10 produtos com maior procura, melhor preço no mercado e mais adaptados às condições angolanas — com base em dados de mercado e experiência de campo.</p>
+
+  <p>Angola tem um dos solos mais férteis de África. Com mais de 58 milhões de hectares de terra arável, sendo apenas 8% actualmente cultivados, o potencial é enorme. Mas nem toda cultura dá o mesmo retorno. O que diferencia o produtor que sobrevive do que prospera é a escolha estratégica do que plantar. Abaixo, analisamos cada cultura com profundidade — por que é lucrativa, como cultivar e o que esperar do mercado.</p>
+
+  <div class="produtos-grid">
+
+    <div class="produto-card">
+      <div class="produto-rank">01</div>
+      <div class="produto-nome">Tomate (Solanum lycopersicum)</div>
+      <span class="produto-lucro">↑ Alta lucratividade</span>
+      <p>O tomate é o rei das hortas angolanas. Com um ciclo curto de 60 a 90 dias, pode-se fazer até 3 colheitas por ano em zonas irrigadas. A procura é constante em todos os mercados — do Roque Santeiro em Luanda aos mercados do Huambo e Lubango. Um hectare bem gerido pode produzir entre 25 a 40 toneladas. O preço no grossista oscila entre 150 e 400 Kz/kg, dependendo da época. Na época seca (Junho a Setembro), quando a oferta cai, os preços sobem drasticamente. <strong>Variedades recomendadas:</strong> Rio Grande, Marmande e varietais locais resistentes ao calor como o Tomati da Huíla. Atenção ao míldio e à mosca branca — as principais pragas.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">02</div>
+      <div class="produto-nome">Cebola (Allium cepa)</div>
+      <span class="produto-lucro">↑ Muito alta margem</span>
+      <p>Angola importa mais de 70% das cebolas que consome — sobretudo do Brasil, Holanda e África do Sul. Isso significa que cada cebola produzida localmente substitui uma importação e gera divisas para o produtor. O preço de venda ao grossista varia entre 200 e 600 Kz/kg, com picos nos finais de ano quando a procura é máxima. O ciclo dura 120 a 150 dias. As províncias da Huíla, Bié e Malanje têm condições climáticas ideais. <strong>Atenção:</strong> a cebola precisa de solo bem drenado e rego preciso. A podridão da base é o principal inimigo. Secar bem antes de armazenar é fundamental.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">03</div>
+      <div class="produto-nome">Alho (Allium sativum)</div>
+      <span class="produto-lucro">↑↑ Lucro excepcional</span>
+      <p>O alho é, possivelmente, o produto com maior retorno por quilo cultivado em Angola. O preço chega a 1.500 a 3.000 Kz/kg no retalho, e o custo de produção é relativamente baixo. Planta-se entre Abril e Junho no planalto central. O ciclo dura cerca de 150 dias. A produção nacional é insignificante face à procura — quase todo o alho vem de importação. Um hectare pode produzir 8 a 12 toneladas, o que significa um rendimento bruto potencial de 12 a 36 milhões de Kwanzas. A Huíla e o Bié são as regiões mais promissoras para esta cultura.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">04</div>
+      <div class="produto-nome">Feijão Macunde (Vigna unguiculata)</div>
+      <span class="produto-lucro">↑ Risco baixo, lucro estável</span>
+      <p>O feijão macunde é a proteína do povo angolano. Adapta-se a solos menos férteis, resiste à seca, e tem ciclo curto de 60 a 75 dias. É cultivado em quase todas as províncias. O mercado é garantido — as famílias angolanas consomem feijão todos os dias. O preço médio ao produtor está entre 300 e 700 Kz/kg. Um hectare produz entre 1,5 e 3 toneladas. Pode ser consorciado com milho (sistema de cultivo associado), o que reduz custos e maximiza o uso da terra. Tem ainda vantagem de fixar azoto no solo, melhorando a fertilidade para a próxima cultura.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">05</div>
+      <div class="produto-nome">Couve e Folhosas (Brassica spp.)</div>
+      <span class="produto-lucro">↑ Ciclo ultra-rápido</span>
+      <p>Couves, espinafres e outras folhosas têm o ciclo mais curto de todas as hortícolas — algumas prontas para colheita em apenas 30 a 45 dias. São cultivadas o ano inteiro com irrigação. O preço varia entre 100 e 300 Kz/maço (cerca de 500g). A procura é diária em Luanda, onde os musseques consomem grandes quantidades de couve cozida. Produtores peri-urbanos nas arredores de Luanda, Huambo e Benguela que cultivam folhosas têm fluxo de caixa semanal constante — uma vantagem enorme para quem precisa de dinheiro regularmente.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">06</div>
+      <div class="produto-nome">Batata-Rena / Batata Doce (Ipomoea batatas)</div>
+      <span class="produto-lucro">↑ Alta resistência à seca</span>
+      <p>A batata doce é um dos alimentos mais versáteis de Angola. Resiste bem à seca após estabelecida, não exige muito adubo e produz abundantemente em solos medianos. A variedade laranja (rica em vitamina A) está a ganhar mercado em Luanda pelos seus benefícios nutricionais. O preço médio ao grossista está entre 150 e 350 Kz/kg. Um hectare produz entre 15 e 30 toneladas. Além do tubérculo, as folhas são comestíveis e vendidas como legume — zero desperdício. As províncias do Bié, Malanje e Uíge são tradicionais produtoras.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">07</div>
+      <div class="produto-nome">Pimento e Piri-Piri (Capsicum spp.)</div>
+      <span class="produto-lucro">↑↑ Mercado crescente</span>
+      <p>O pimento colorido (vermelho, amarelo e verde) está a ter uma procura crescente em Luanda, impulsionada pela expansão de restaurantes, hotéis e supermercados. O preço pode chegar a 600 a 1.200 Kz/kg para pimentos coloridos de qualidade. O piri-piri seco tem mercado garantido tanto internamente como para exportação para Portugal e Brasil, onde a diáspora angolana é grande consumidora. Um hectare de pimentos pode gerar entre 15 e 25 toneladas. Planta-se bem nas províncias do Bié, Huíla e arredores de Luanda com irrigação.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">08</div>
+      <div class="produto-nome">Mandioca (Manihot esculenta)</div>
+      <span class="produto-lucro">↑ Volume e segurança</span>
+      <p>A mandioca é o alimento base de mais de 60% dos angolanos. A farinha de mandioca (fuba de bombó) e o funje são alimentos fundamentais. A vantagem da mandioca é a sua resiliência extrema — cresce em solos pobres, com pouca água, sem adubação intensiva. Pode ficar no campo por 18 a 24 meses sem perder qualidade, actuando como "banco de alimentos". O preço da raiz fresca varia entre 80 e 200 Kz/kg, e a farinha processada pode chegar a 500 Kz/kg — o processamento local agrega muito valor. Províncias do norte (Uíge, Malanje, Kwanza Norte) são as maiores produtoras.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">09</div>
+      <div class="produto-nome">Amendoim (Arachis hypogaea)</div>
+      <span class="produto-lucro">↑ Exportação possível</span>
+      <p>O amendoim ocupa um lugar especial na culinária angolana — vai no muamba, no calulu, no gufongo e é vendido torrado em todos os mercados. Adapta-se bem às regiões semi-áridas do sul (Huíla, Cunene, Namibe). O preço do amendoim em casca oscila entre 300 e 600 Kz/kg, e a pasta de amendoim artesanal pode ser vendida por 800 a 1.500 Kz/kg. Tem potencial de exportação para Portugal e para países vizinhos. Um hectare produz entre 1,5 e 3 toneladas. Cresce bem em solos arenosos e o seu cultivo melhora a fertilidade do solo ao fixar azoto.</p>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-rank">10</div>
+      <div class="produto-nome">Banana (Musa spp.)</div>
+      <span class="produto-lucro">↑ Produção perene</span>
+      <p>A banana é uma cultura perene que, uma vez estabelecida, produz por anos sem replantação. As províncias do norte (Uíge, Kwanza Norte, Bengo) têm condições climáticas ideais. O caixote de banana (18 a 20 kg) é vendido entre 3.500 e 8.000 Kz em Luanda, dependendo da variedade e da época. A variedade Nanica é a mais comercializada, mas a Prata e a Maçã têm preço mais alto. Um hectare pode conter entre 1.500 e 2.000 pés de banana, com produção contínua de 10 a 15 meses após plantação. É uma das melhores culturas para renda mensal estável.</p>
+    </div>
+
+  </div>
+
+  <div class="caso-real">
+    <span class="caso-real-badge">✦ Caso Real</span>
+    <h3>António Domingos — Produtor de Tomate e Cebola, Huambo</h3>
+    <p>António começou em 2018 com apenas 0,5 hectares nos arredores da cidade do Huambo, usando capital próprio de 450.000 Kz poupados durante anos como motorista. Instalou um sistema de irrigação por gravidade usando uma nascente próxima. No primeiro ano, perdeu 30% da produção por falta de conhecimento sobre doenças do tomate. Buscou apoio na delegação provincial do MINAGRIF e participou num curso de campo organizado pela FAO Angola.</p>
+    <p>Em 2020, ampliou para 2 hectares combinando tomate (Setembro–Dezembro) com cebola (Abril–Agosto), aproveitando os dois períodos climáticos. Começou a vender directamente a dois supermercados do Huambo, eliminando o intermediário. Em 2023, facturou mais de 18 milhões de Kwanzas e empregava 6 trabalhadores permanentes da sua comunidade.</p>
+    <div class="caso-real-numeros">
+      <div class="caso-num"><strong>2 ha</strong><span>área cultivada</span></div>
+      <div class="caso-num"><strong>18 M Kz</strong><span>facturação 2023</span></div>
+      <div class="caso-num"><strong>6</strong><span>empregos gerados</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 2: CALENDÁRIO AGRÍCOLA -->
+<section class="secao" id="s2">
+<div class="container">
+  <span class="secao-numero">02</span>
+  <span class="secao-label">Capítulo Dois</span>
+  <h2>Calendário Agrícola por Região</h2>
+
+  <p class="secao-intro">Angola tem quatro grandes regiões agroclimáticas com padrões de chuva distintos. Conhecer o seu calendário regional é a diferença entre uma boa colheita e perder tudo.</p>
+
+  <p>Angola tem um clima diversificado que varia do tropical húmido no norte ao árido e semi-árido no sul. Esta diversidade climática é simultaneamente um desafio e uma oportunidade: enquanto o norte tem chuvas abundantes e previsíveis, o sul exige técnicas de conservação de água e escolha criteriosa de culturas resistentes à seca. A compreensão do calendário climático de cada região é o primeiro passo para uma agricultura de sucesso.</p>
+
+  <p>Em Angola, distinguem-se essencialmente dois períodos: a <strong>estação das chuvas (cacimbo quente)</strong>, que vai de Outubro/Novembro a Abril/Maio, e a <strong>estação seca (cacimbo frio)</strong>, que vai de Maio a Setembro/Outubro. No entanto, estas datas variam significativamente por região.</p>
+
+  <div class="regioes-grid">
+
+    <div class="regiao-card">
+      <div class="regiao-header">
+        <h3>🌿 Região Norte</h3>
+        <p>Uíge · Malanje · Kwanza Norte · Bengo · Cabinda · Zaire</p>
+      </div>
+      <div class="regiao-body">
+        <p><strong>Clima:</strong> Tropical húmido. Chuvas abundantes entre Setembro e Maio. Temperatura média de 24–28°C. Alta humidade relativa (70–85%). Solos ferrálicos avermelhados, profundos e relativamente férteis.</p>
+        <p><strong>Período de plantação principal:</strong> Setembro a Novembro (início das chuvas). Segunda época: Fevereiro a Março.</p>
+        <p><strong>Culturas recomendadas:</strong></p>
+        <span class="regiao-tag">Mandioca</span>
+        <span class="regiao-tag">Banana</span>
+        <span class="regiao-tag">Cacau</span>
+        <span class="regiao-tag">Café</span>
+        <span class="regiao-tag">Ananás</span>
+        <span class="regiao-tag">Feijão</span>
+        <span class="regiao-tag">Milho</span>
+        <p style="margin-top:12px"><strong>Atenção:</strong> O excesso de humidade favorece doenças fúngicas como o antracnose e podridão de raízes. Priorizar drenagem e espaçamento adequado.</p>
+      </div>
+    </div>
+
+    <div class="regiao-card">
+      <div class="regiao-header">
+        <h3>🌾 Região Centro</h3>
+        <p>Huambo · Bié · Kwanza Sul · Benguela (interior)</p>
+      </div>
+      <div class="regiao-body">
+        <p><strong>Clima:</strong> Tropical de altitude (1.700–1.800m). Temperatura amena de 15–22°C. Chuvas moderadas de Outubro a Abril. Solos francos de boa textura — os melhores para horticultura em Angola.</p>
+        <p><strong>Período de plantação principal:</strong> Outubro a Dezembro. Segunda época aproveitando irrigação: Maio a Julho.</p>
+        <p><strong>Culturas recomendadas:</strong></p>
+        <span class="regiao-tag">Tomate</span>
+        <span class="regiao-tag">Cebola</span>
+        <span class="regiao-tag">Alho</span>
+        <span class="regiao-tag">Batata</span>
+        <span class="regiao-tag">Couve</span>
+        <span class="regiao-tag">Feijão</span>
+        <span class="regiao-tag">Milho</span>
+        <p style="margin-top:12px"><strong>Destaque:</strong> O Planalto Central é o "celeiro hortícola" de Angola. As temperaturas frescas favorecem raízes e frutos de excelente qualidade. Ideal para cebola e alho.</p>
+      </div>
+    </div>
+
+    <div class="regiao-card">
+      <div class="regiao-header">
+        <h3>🏜️ Região Sul</h3>
+        <p>Huíla · Cunene · Namibe · Cuando Cubango</p>
+      </div>
+      <div class="regiao-body">
+        <p><strong>Clima:</strong> Semi-árido a árido. Chuvas irregulares e escassas (200–600mm/ano), concentradas entre Novembro e Março. Temperatura 20–32°C. Solos arenosos a franco-arenosos. Irrigation é essencial para a maioria das culturas.</p>
+        <p><strong>Período de plantação:</strong> Novembro a Janeiro (com início das chuvas). Com irrigação: qualquer época junto a rios ou poços.</p>
+        <p><strong>Culturas recomendadas:</strong></p>
+        <span class="regiao-tag">Amendoim</span>
+        <span class="regiao-tag">Sorgo</span>
+        <span class="regiao-tag">Mapira</span>
+        <span class="regiao-tag">Batata Doce</span>
+        <span class="regiao-tag">Cebola (irrigada)</span>
+        <span class="regiao-tag">Melancia</span>
+        <p style="margin-top:12px"><strong>Estratégia:</strong> Focar em culturas resistentes à seca e aproveitar os vales fluviais (rios Cunene, Cubango) para horticultura irrigada de alto valor.</p>
+      </div>
+    </div>
+
+    <div class="regiao-card">
+      <div class="regiao-header">
+        <h3>🌊 Região Leste</h3>
+        <p>Lunda Norte · Lunda Sul · Moxico</p>
+      </div>
+      <div class="regiao-body">
+        <p><strong>Clima:</strong> Tropical de transição. Chuvas entre Outubro e Abril (900–1.200mm/ano). Temperatura de 22–30°C. Solos arenosos profundos com baixa fertilidade natural — necessitam adubação orgânica.</p>
+        <p><strong>Período de plantação principal:</strong> Outubro a Novembro. Segunda época: Fevereiro (culturas de ciclo curto).</p>
+        <p><strong>Culturas recomendadas:</strong></p>
+        <span class="regiao-tag">Mandioca</span>
+        <span class="regiao-tag">Milho</span>
+        <span class="regiao-tag">Feijão</span>
+        <span class="regiao-tag">Gergelim</span>
+        <span class="regiao-tag">Girassol</span>
+        <span class="regiao-tag">Amendoim</span>
+        <p style="margin-top:12px"><strong>Potencial:</strong> A região tem enorme disponibilidade de terra e água (rios Kwango e Kasai). É ideal para culturas oleaginosas como gergelim e girassol, com potencial de exportação.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 class="subsecao">Calendário Mensal de Actividades Agrícolas — Região Centro (Referência)</h3>
+
+  <div class="tabela-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Mês</th>
+          <th>Condição</th>
+          <th>Actividade Principal</th>
+          <th>Culturas em Campo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Janeiro</td><td class="mes-chuva">☔ Chuva intensa</td><td>Adubação de cobertura; controlo de pragas; mondas</td><td>Tomate, feijão, milho em crescimento</td></tr>
+        <tr><td>Fevereiro</td><td class="mes-chuva">☔ Chuva</td><td>Colheita de feijão precoce; replantação de folhosas</td><td>Couve, espinafre, tomate tardio</td></tr>
+        <tr><td>Março</td><td class="mes-chuva">☔ Chuva moderada</td><td>Colheita de tomate; preparo de canteiros de cebola</td><td>Batata doce, cebola em viveiro</td></tr>
+        <tr><td>Abril</td><td class="mes-seco">🌤 Transição</td><td>Plantação de cebola e alho; irrigação inicial</td><td>Cebola, alho, couves irrigadas</td></tr>
+        <tr><td>Maio</td><td class="mes-seco">☀️ Seco e frio</td><td>Irrigação diária; controlo de pragas secas</td><td>Cebola, alho, pimentos irrigados</td></tr>
+        <tr><td>Junho</td><td class="mes-seco">☀️ Cacimbo</td><td>Colheita de alho; secagem; armazenamento</td><td>Cebola em crescimento final</td></tr>
+        <tr><td>Julho</td><td class="mes-seco">☀️ Cacimbo frio</td><td>Colheita de cebola; cura e armazenamento</td><td>Tomate de cacimbo com irrigação intensa</td></tr>
+        <tr><td>Agosto</td><td class="mes-seco">☀️ Cacimbo</td><td>Preparo do solo; adubação orgânica; abertura de sulcos</td><td>Canteiros em preparação</td></tr>
+        <tr><td>Setembro</td><td class="mes-seco">🌤 Transição</td><td>Plantação de tomate; sementeira de milho</td><td>Tomate em viveiro; milho jovem</td></tr>
+        <tr><td>Outubro</td><td class="mes-chuva">☔ Primeiras chuvas</td><td>Transplante de tomate; sementeira de feijão; fertilização</td><td>Tomate, feijão, milho, amendoim</td></tr>
+        <tr><td>Novembro</td><td class="mes-chuva">☔ Chuva boa</td><td>Mondas; tutoragem do tomate; controlo de fungos</td><td>Todas as culturas em pleno crescimento</td></tr>
+        <tr><td>Dezembro</td><td class="mes-chuva">☔ Chuva forte</td><td>Colheita de primeiros tomates; reforço de drenagem</td><td>Tomate em produção; feijão a florescer</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dica">
+    <span class="dica-label">💡 Dica do Agrónomo</span>
+    <p>O produtor inteligente planta em dois momentos distintos dentro da mesma época — chamamos de "escalonamento de plantação". Em vez de plantar todo o tomate de uma vez, plante metade em Setembro e a outra metade 3 semanas depois. Assim, as colheitas não coincidem, os preços se mantêm mais altos e o risco de perda total por uma praga ou doença é reduzido drasticamente.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 3: PREPARO DO SOLO -->
+<section class="secao" id="s3">
+<div class="container">
+  <span class="secao-numero">03</span>
+  <span class="secao-label">Capítulo Três</span>
+  <h2>Técnicas de Preparo do Solo Sem Maquinário Pesado</h2>
+
+  <p class="secao-intro">A maioria dos agricultores familiares angolanos não tem acesso a tractores. Isso não é um obstáculo — é uma oportunidade para usar técnicas que custam menos, preservam melhor o solo e dão resultados superiores a longo prazo.</p>
+
+  <p>O solo é o capital mais valioso que um agricultor tem. Tratá-lo mal é como queimar o seu próprio dinheiro. O uso excessivo de maquinário pesado compacta o solo, destrói os microrganismos benéficos e aumenta a erosão. Nas técnicas que apresentamos abaixo, a força é humana, os insumos são locais e o resultado é um solo vivo, produtivo e sustentável.</p>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Desbravamento Selectivo e Corte de Biomassa</h4>
+        <p>Antes de qualquer coisa, analise a vegetação existente. Não limpe tudo de forma indiscriminada. Manter algumas árvores de sombra parcial (como o embondeiro jovem ou acácias) protege o solo do impacto directo da chuva e reduz a erosão. Para o desbravamento, use catana (facão) e machado. Corte a vegetação rasteira e deposite-a sobre o solo — não queime. Este material vai decompor e formar um humus natural que enriquece a terra. Em Angola, a queimada é prática comum mas extremamente prejudicial: destrói os microrganismos do solo, elimina a matéria orgânica e liberta carbono. Evite ao máximo.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Lavoura Manual com Enxada e Sacho</h4>
+        <p>A enxada é a ferramenta mais eficiente que existe para o agricultor familiar. Para lavoura profunda (30–40 cm), use a técnica da dupla escavação: remova a primeira camada de terra (15 cm), afrofe a camada inferior com a enxada sem inverter, incorpore composto ou matéria orgânica na camada inferior, e reponha a terra superior. Esta técnica cria canteiros com solo profundo, bem arejado e rico em nutrientes. É trabalhosa, mas um canteiro assim preparado dura 3 a 4 anos sem precisar de repreparo profundo. Para áreas maiores (mais de 0,5 ha), organize mutirões — grupo de vizinhos que trabalham juntos por turnos, sem custo monetário.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Construção de Canteiros Elevados (Beds)</h4>
+        <p>Para horticultura (tomate, cebola, couve, pimento), os canteiros elevados são superiores ao cultivo ao nível do solo. Construa canteiros de 1,2 metros de largura por comprimento variável (5, 10 ou 20 metros conforme o terreno), com altura de 20 a 30 cm acima do nível do solo. O material para elevar o canteiro pode ser a própria terra escavada nos corredores. Vantagens: melhor drenagem (evita apodrecimento de raízes), aquecimento mais rápido do solo, menor pisoteio das raízes, controlo mais fácil de ervas daninhas e pragas. Os corredores entre canteiros (50 cm de largura) servem para circulação e rega.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Adubação Orgânica: Como Fazer Composto em Casa</h4>
+        <p>O composto é o ouro do agricultor. Para fazer composto em Angola sem custo: recolha restos de cozinha (cascas de frutos, borra de café, cascas de legumes — nunca carne ou peixe), ervas cortadas, folhas secas, cinza de lenha (em pequena quantidade), esterco de bois ou cabras (disponível gratuitamente em zonas rurais) e palha seca. Monte camadas alternadas de material húmido (verde) e seco (castanho) numa pilha com 1,5m × 1,5m × 1m de altura. Regue levemente a cada 3 dias. Vire a pilha a cada 2 semanas. Em 60 a 90 dias, terá composto escuro, com cheiro a terra húmida. Aplique 5 a 10 kg por metro quadrado antes da plantação.</p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Mulching — Cobertura do Solo com Palha</h4>
+        <p>O mulching é uma das técnicas mais baratas e eficazes da agricultura. Consiste em cobrir o solo entre as plantas com uma camada de 5 a 10 cm de palha, capim seco, folhas ou restos vegetais. Os benefícios são impressionantes: reduz a evaporação da água em até 50% (precisando regar metade), mantém a temperatura do solo estável, suprime o crescimento de ervas daninhas (reduzindo o trabalho de monda), evita o impacto da chuva (que compacta e erode o solo) e ao decompor, incorpora matéria orgânica. Em Angola, o capim elefante (capim-napier), as palhas de milho após a colheita, as folhas de bananeira e a casca de arroz são excelentes materiais de mulching, todos de graça ou muito barato.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h4>Rotação de Culturas: A Técnica que Regenera a Terra</h4>
+        <p>Nunca plante a mesma cultura no mesmo canteiro dois anos seguidos. A rotação é a lei de ouro da agricultura saudável. A sequência ideal para Angola é: <strong>Ano 1 — Leguminosas</strong> (feijão, amendoim, soja): fixam azoto no solo, melhorando a fertilidade. <strong>Ano 2 — Folhosas ou frutos</strong> (couve, tomate, pimento): aproveitam o azoto deixado pelas leguminosas. <strong>Ano 3 — Raízes e tubérculos</strong> (mandioca, batata doce, cebola): aproveitam os nutrientes mais profundos. <strong>Ano 4 — Descansando o solo</strong> (pousio com plantas de cobertura como crotalária ou mucuna): recarrega completamente a fertilidade. Este ciclo de 4 anos pode ser aplicado em diferentes parcelas simultaneamente, mantendo sempre a produção.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="destaque-box">
+    <h3>Técnica Especial: O "Machamba de Cova" da Tradição Angolana</h3>
+    <p>Os nossos antepassados angolanos já praticavam uma técnica brilhante chamada informalmente de "machamba de cova" — plantar em covas de 40×40×40 cm preenchidas com terra + cinza + esterco. Esta técnica concentra os nutrientes exactamente onde as raízes crescem, economiza até 70% dos insumos comparado à adubação generalizada, e melhora dramaticamente a sobrevivência das plantas em período seco. Use esta técnica especialmente para milho, feijão e amendoim. Para cada cova, misture: 2 partes de terra local, 1 parte de esterco curtido, 1 punhado de cinza de lenha, e se disponível, 1 colher de sopa de fósforo mineral (superfosfato). Esta mistura é suficiente para uma planta durante toda a sua vida produtiva.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 4: IRRIGAÇÃO -->
+<section class="secao" id="s4">
+<div class="container">
+  <span class="secao-numero">04</span>
+  <span class="secao-label">Capítulo Quatro</span>
+  <h2>Sistema de Irrigação Simples e Barato para Época Seca</h2>
+
+  <p class="secao-intro">A época seca em Angola não precisa de ser sinónimo de campo parado. Com os sistemas certos, pode-se produzir durante o cacimbo — quando os preços dos legumes disparam e os concorrentes param.</p>
+
+  <p>Angola tem recursos hídricos abundantes — rios, lagoas, lençóis freáticos superficiais e nascentes. O problema não é falta de água, mas falta de infra-estrutura para a levar até às plantas de forma eficiente. Os sistemas industriais de irrigação por gotejamento custam fortunas. Mas existem soluções igualmente eficazes que qualquer produtor pode montar com materiais simples e acessíveis.</p>
+
+  <h3 class="subsecao">Sistema 1: Irrigação por Gravidade com Mangueira Perfurada</h3>
+
+  <p>Este é o sistema mais barato e eficaz para pequenos produtores. Funciona assim: um tanque ou barril (200 litros ou mais) é elevado a pelo menos 1 metro do chão (usando suportes de madeira, pedras ou terra) próximo à fonte de água. Deste tanque, sai uma mangueira de 20mm que percorre todo o campo. Ao longo desta mangueira principal, perfure pequenos furos de 1mm a cada 30 cm com um alfinete ou agulha quente. A água escoa lentamente pelos furos, molhando o solo de forma uniforme ao longo de horas. O custo total: barril de 200L (pode ser segundo uso) + 50 metros de mangueira + suportes = aproximadamente 15.000 a 25.000 Kz. Suficiente para irrigar 500 m² de canteiros.</p>
+
+  <div class="dica">
+    <span class="dica-label">💡 Truque prático</span>
+    <p>Para evitar que os furos da mangueira entupam com terra, enrole-os com uma camada de pano velho (TNT ou tecido grosso). Isso filtra a terra sem bloquear a passagem da água. Troque o pano a cada 6 meses. Este simples truque prolonga a vida do sistema por anos.</p>
+  </div>
+
+  <h3 class="subsecao">Sistema 2: Garrafas PET como Gotejadores</h3>
+
+  <p>Este sistema é perfeito para hortas domésticas e canteiros pequenos. Pegue garrafas PET de 1,5L ou 2L. Perfure a tampa com um prego quente (furo muito pequeno — 0,5 mm). Encha a garrafa com água, tape e enterre até ao pescoço ao lado de cada planta com a tampa virada para baixo. A água goteja lentamente durante 6 a 12 horas, hidratando directamente a raiz. Custo: zero — usa-se garrafas recicladas. Para um canteiro de 10m², são necessárias cerca de 20 garrafas. Este sistema reduz o consumo de água em até 80% em comparação com rega à superfície com regador.</p>
+
+  <h3 class="subsecao">Sistema 3: Poço de Absorção e Bomba de Pedal</h3>
+
+  <p>Para produtores com acesso a rios ou água subterrânea a menos de 8 metros de profundidade, a bomba de pedal (também chamada de treadle pump) é uma revolução. Esta bomba, movida apenas pela força das pernas, pode elevar até 7.000 litros de água por dia — suficiente para irrigar 1 hectare. Funciona como uma bicicleta deitada: o agricultor pisa em dois pedais alternadamente, criando sucção que puxa a água. O custo de fabrico local é de 40.000 a 80.000 Kz usando ferro, tubos PVC e peças simples. A ADRA Angola (Acção para o Desenvolvimento Rural e Ambiente) e algumas ONGs têm programas de distribuição subsidiada destas bombas.</p>
+
+  <h3 class="subsecao">Sistema 4: Construção de Barraginhas (Bacias de Captação)</h3>
+
+  <p>Para o sul e leste de Angola, onde a chuva é escassa mas cai de forma torrencial, as barraginhas são fundamentais. Uma barraginha é uma pequena escavação em meia-lua construída no sentido contrário da inclinação do terreno para captar a enxurrada. Cada barraginha retém entre 500 e 2.000 litros de água de chuva que de outra forma se perderia pela erosão. Construção: marca-se uma linha curva de 5 a 10 metros seguindo as curvas de nível, escava-se uma vala de 50 cm de profundidade por 50 cm de largura, e a terra retirada é depositada abaixo formando um pequeno muro. Plante-se directamente no interior da barraginha e nas suas bordas. Uma propriedade de 1 hectare pode ter 20 a 50 barraginhas, aumentando a disponibilidade de água para as plantas em até 40%.</p>
+
+  <div class="caso-real">
+    <span class="caso-real-badge">✦ Caso Real</span>
+    <h3>Maria Catarina — Produtora de Hortaliças, Arredores de Lubango, Huíla</h3>
+    <p>Maria cultivava apenas na época das chuvas até 2021, ficando sem renda durante o cacimbo. Com apoio de um técnico do IIFA (Instituto de Investigação Florestal e Agrária), instalou um sistema de irrigação por gravidade usando um reservatório de 1.000 litros elevado 2 metros, alimentado por uma nascente próxima através de canalização de PVC.</p>
+    <p>Com o sistema, passou a produzir tomate, couve e cebola durante o cacimbo (Maio a Setembro) — exactamente quando a procura no mercado do Lubango estava no pico. Nos primeiros 3 meses, vendeu ao dobro do preço normal. O investimento no sistema de irrigação (85.000 Kz) foi recuperado em 6 semanas de venda.</p>
+    <div class="caso-real-numeros">
+      <div class="caso-num"><strong>85 mil</strong><span>Kz investidos</span></div>
+      <div class="caso-num"><strong>6 sem.</strong><span>para recuperar</span></div>
+      <div class="caso-num"><strong>2×</strong><span>preço na época seca</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 5: PRAGAS -->
+<section class="secao" id="s5">
+<div class="container">
+  <span class="secao-numero">05</span>
+  <span class="secao-label">Capítulo Cinco</span>
+  <h2>Como Proteger a Plantação de Pragas Usando Métodos Naturais e Locais</h2>
+
+  <p class="secao-intro">Os pesticidas químicos custam caro, envenenam o solo, matam os inimigos naturais das pragas e deixam resíduos nos alimentos. A natureza angolana oferece soluções melhores, mais baratas e mais seguras.</p>
+
+  <p>A filosofia do controlo integrado de pragas (CIP) baseia-se num princípio simples: a praga só se torna um problema quando as suas populações explodem. Plantas fortes, solo saudável e um ecossistema equilibrado evitam que isso aconteça. Quando é necessária intervenção, usa-se primeiro o método mais barato e menos nocivo, escalonando apenas se necessário.</p>
+
+  <h3 class="subsecao">Inimigos Naturais das Principais Pragas de Angola</h3>
+
+  <p>Antes de aplicar qualquer produto, identifique correctamente a praga. As principais pragas das culturas angolanas são: lagarta-do-cartucho do milho (Spodoptera frugiperda), mosca branca (Bemisia tabaci), ácaros (Tetranychidae), pulgões (Aphididae), tripes, nemátodos das raízes e lesmas. Para cada uma, existe um inimigo natural ou repelente local eficaz.</p>
+
+  <ul class="lista-custom">
+    <li><strong>Extracto de Nim (Azadirachta indica):</strong> O nim é uma árvore muito comum em Angola, plantada em ruas e jardins. As suas folhas e sementes contêm azadiractina — um potente insecticida e repelente natural. Ferva 1 kg de folhas frescas em 10 litros de água por 20 minutos. Deixe arrefecer, coe e aplique nas plantas com pulverizador. Funciona contra pulgões, mosca branca, tripes, lagartas jovens e ácaros. Aplicar ao fim do dia para não queimar as folhas e repetir a cada 7 dias ou após chuva.</li>
+    <li><strong>Macerado de Alho com Pimenta:</strong> Triture 100g de alho + 10 pimenta malagueta + 1L de água. Deixe repousar 24 horas. Coe e dilua em 10 litros de água com 2 colheres de sopa de sabão de coco (não detergente). Aplique semanalmente. Repele pulgões, mosca branca, lagartas e lesmas. O cheiro intenso confunde o olfacto dos insectos que usam compostos aromáticos para encontrar as plantas hospedeiras.</li>
+    <li><strong>Cinza de Lenha:</strong> Polvilhar cinza de lenha (fria) directamente sobre as plantas e na base do caule repele lesmas, caracóis, formigas e alguns besouros. A cinza altera o pH da superfície e desidrata os organismos de corpo mole que a tocam. Grátis em praticamente qualquer lar angolano. Reaplicar após cada chuva.</li>
+    <li><strong>Armadilhas Amarelas Pegajosas:</strong> Pinte um pedaço de madeira ou cartão de amarelo brilhante e cubra com vaselina ou mel de cana (melado). Pendure a 30 cm acima das plantas. Moscas brancas, tripes e outros insectos voadores são fortemente atraídos pela cor amarela e ficam colados. Uma armadilha por cada 5 m² de canteiro. Verifique e limpe a cada 3 dias.</li>
+    <li><strong>Consórcio com Plantas Repelentes:</strong> Plantar manjericão entre os tomates repele a mosca branca e o pulgão. Plantar cravo-de-defunto (tagetes) nas bordas do canteiro repele nemátodos e moscas. Plantar capim cidreira ao redor da horta repele mosquitos e alguns besouros. Estas plantas não ocupam espaço significativo e protegem activamente as culturas vizinhas.</li>
+    <li><strong>Controlo Biológico com Bacillus thuringiensis (Bt):</strong> Esta bactéria natural, disponível como pó em algumas cooperativas e lojas agrícolas angolanas, é específica contra lagartas (não afecta abelhas, pássaros ou humanos). Diluir 5g por litro de água e aplicar sobre as folhas ao entardecer. As lagartas que ingerirem as folhas tratadas morrem em 48 horas. Eficaz contra a lagarta-do-cartucho e a lagarta-da-couve.</li>
+    <li><strong>Armadilha de Feromona para Lagarta-do-Cartucho:</strong> Esta praga devastou lavouras de milho em Angola nos últimos anos. A armadilha de feromona usa o cheiro sexual da fêmea para atrair e capturar os machos, reduzindo a reprodução. Os kits são distribuídos gratuitamente pela FAO Angola através dos escritórios provinciais do MINAGRIF. Solicite às extensões rurais da sua área.</li>
+  </ul>
+
+  <div class="destaque-box">
+    <h3>O Calendário de Pulverização Preventiva</h3>
+    <p>A chave não é esperar ver a praga para agir — é prevenir. A cada 15 dias, mesmo sem ver pragas, aplique extracto de nim ou macerado de alho/pimenta nas suas plantas. Combine com inspeção visual semanal: observe o verso das folhas (onde a maioria das pragas se esconde), a base das hastes e o solo próximo às raízes. Se encontrar mais de 5 insectos por planta ou mais de 10% de folhas danificadas, aumente a frequência para aplicações semanais. Se após 3 aplicações a situação não melhorar, procure apoio do técnico extensionista da sua área — pode ser uma doença fúngica ou bacteriana que exige tratamento específico.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 6: FINANCEIRO -->
+<section class="secao" id="s6">
+<div class="container">
+  <span class="secao-numero">06</span>
+  <span class="secao-label">Capítulo Seis</span>
+  <h2>Quanto Investir e Quanto Esperar Ganhar por Hectare</h2>
+
+  <p class="secao-intro">Números reais, sem ilusões. Aqui estão os custos e retornos esperados para as principais culturas em Angola, com base em dados de campo de 2023–2024 e preços médios do mercado angolano.</p>
+
+  <p>Todo produtor precisa de saber exactamente quanto vai gastar antes de plantar e quanto pode esperar ganhar. O negócio agrícola tem riscos — clima, pragas, preços de mercado — mas estes riscos podem ser geridos com planeamento. Abaixo apresentamos a análise financeira por hectare para as culturas mais comuns, considerando um produtor familiar sem maquinário próprio e usando irrigação simples.</p>
+
+  <h3 class="subsecao">Tomate — Análise por Hectare (Ciclo 90 dias)</h3>
+
+  <div class="financeiro-grid">
+    <div class="financeiro-card investimento">
+      <h3>Custo de Produção</h3>
+      <div class="financeiro-valor">2,8 M Kz</div>
+      <div class="financeiro-sub">por hectare por ciclo</div>
+    </div>
+    <div class="financeiro-card retorno">
+      <h3>Receita Bruta Esperada</h3>
+      <div class="financeiro-valor">8–14 M Kz</div>
+      <div class="financeiro-sub">vendendo ao grossista</div>
+    </div>
+  </div>
+
+  <div class="tabela-wrapper">
+    <table>
+      <thead>
+        <tr><th>Item de Custo</th><th>Quantidade</th><th>Valor (Kz)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sementes (variedades melhoradas)</td><td>200g</td><td>45.000</td></tr>
+        <tr><td>Adubação (NPK 12-12-17 + ureia)</td><td>200 kg</td><td>480.000</td></tr>
+        <tr><td>Composto orgânico (produção própria)</td><td>5 ton</td><td>50.000</td></tr>
+        <tr><td>Mão-de-obra (preparo + plantação + colheita)</td><td>80 dias/homem</td><td>960.000</td></tr>
+        <tr><td>Pesticidas e fungicidas naturais</td><td>—</td><td>80.000</td></tr>
+        <tr><td>Irrigação (energia + manutenção)</td><td>—</td><td>350.000</td></tr>
+        <tr><td>Tutores de madeira (canas/varas)</td><td>2.000 unid.</td><td>200.000</td></tr>
+        <tr><td>Transporte para mercado</td><td>3 viagens</td><td>180.000</td></tr>
+        <tr><td>Imprevistos (10%)</td><td>—</td><td>234.500</td></tr>
+        <tr style="background: rgba(45,80,22,0.1)"><td><strong>TOTAL</strong></td><td></td><td><strong>2.579.500 Kz</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Produção esperada:</strong> 25 a 40 toneladas/ha. <strong>Preço grossista médio:</strong> 200 a 350 Kz/kg (preço sobe para 400–600 Kz/kg na época seca). <strong>Lucro líquido estimado:</strong> 5 a 11 milhões de Kz por ciclo, 3 vezes por ano = <strong>15 a 33 milhões de Kz/ano</strong>.</p>
+
+  <h3 class="subsecao">Tabela Comparativa — Culturas Principais</h3>
+
+  <div class="tabela-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Cultura</th>
+          <th>Custo/ha (Kz)</th>
+          <th>Produção/ha</th>
+          <th>Preço médio</th>
+          <th>Lucro líquido/ha</th>
+          <th>Ciclo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tomate</td><td>2,5–3 M</td><td>25–40 t</td><td>200–400 Kz/kg</td><td>5–11 M Kz</td><td>90 dias</td></tr>
+        <tr><td>Cebola</td><td>1,8–2,5 M</td><td>20–35 t</td><td>250–600 Kz/kg</td><td>5–15 M Kz</td><td>140 dias</td></tr>
+        <tr><td>Alho</td><td>2–3 M</td><td>8–12 t</td><td>1.000–3.000 Kz/kg</td><td>8–30 M Kz</td><td>150 dias</td></tr>
+        <tr><td>Feijão Macunde</td><td>600–900 K</td><td>1,5–3 t</td><td>300–700 Kz/kg</td><td>500 K–1,2 M</td><td>70 dias</td></tr>
+        <tr><td>Couve/folhosas</td><td>800 K–1,2 M</td><td>15–25 t</td><td>100–300 Kz/kg</td><td>1–5 M Kz</td><td>45 dias</td></tr>
+        <tr><td>Batata Doce</td><td>700–1,2 M</td><td>15–30 t</td><td>150–350 Kz/kg</td><td>2–8 M Kz</td><td>120 dias</td></tr>
+        <tr><td>Amendoim</td><td>500–900 K</td><td>1,5–3 t</td><td>300–600 Kz/kg</td><td>400 K–1 M</td><td>110 dias</td></tr>
+        <tr><td>Banana</td><td>1,5–2,5 M</td><td>20–40 t</td><td>180–350 Kz/kg</td><td>3–10 M Kz</td><td>Perene</td></tr>
+        <tr><td>Mandioca</td><td>400–700 K</td><td>20–40 t</td><td>80–200 Kz/kg</td><td>1–6 M Kz</td><td>18 meses</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dica">
+    <span class="dica-label">⚠️ Atenção Importante</span>
+    <p>Os valores acima são estimativas baseadas em condições médias. O lucro real depende de: qualidade do solo, acesso à irrigação, gestão de pragas, distância ao mercado e flutuação de preços. Um produtor bem organizado, com boa gestão e acesso directo ao mercado, pode superar os valores máximos indicados. Um produtor mal organizado, dependente de intermediários e sem controlo de custos, pode ficar abaixo do mínimo. O conhecimento é o maior factor de diferenciação.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 7: ARMAZENAMENTO -->
+<section class="secao" id="s7">
+<div class="container">
+  <span class="secao-numero">07</span>
+  <span class="secao-label">Capítulo Sete</span>
+  <h2>Como Armazenar a Colheita para Não Perder Produto</h2>
+
+  <p class="secao-intro">Em Angola, estima-se que 30 a 40% da produção hortícola se perde após a colheita por falta de armazenamento adequado. Cada quilo perdido é dinheiro jogado fora. Aqui estão as técnicas para guardar o que você produziu.</p>
+
+  <p>As perdas pós-colheita são um dos maiores problemas da agricultura angolana. Produtores que colhem toneladas vêem-se forçados a vender tudo de uma vez por preços baixos porque não têm como armazenar. O resultado: preços despencam na época de abundância e sobem na época de escassez — e o produtor sempre sai a perder. Aprender a armazenar correctamente é uma das formas mais rápidas de aumentar a renda sem plantar mais um metro quadrado.</p>
+
+  <h3 class="subsecao">Armazenamento de Grãos e Sementes (Feijão, Milho, Amendoim)</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Secagem Completa é a Regra de Ouro</h4>
+        <p>Nenhum grão deve ser armazenado com humidade superior a 13%. Grãos húmidos criam condições perfeitas para fungos (incluindo aflatoxinas cancerígenas) e insectos. Para verificar: pegue um punhado de grãos e morda — se quebrar com som seco e crocante, está pronto. Se dobrar ou esmagar facilmente, precisa de mais secagem. Seque ao sol por 3 a 5 dias em superfície limpa (lona, cimento ou tapete plástico), virando a cada 2 horas. Nunca seque directamente na terra (absorve humidade do solo).</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Uso de Cinza como Protector Natural</h4>
+        <p>A cinza de lenha misturada aos grãos na proporção de 1:10 (1 parte de cinza para 10 de grão) repele e mata a maioria dos insectos de armazém, incluindo o gorgulho (caruncho) — o maior destruidor de grãos armazenados em Angola. A cinza não prejudica o consumo humano (basta lavar os grãos antes de cozinhar) e é de graça. Outra alternativa é misturar folhas secas de nim trituradas na mesma proporção. Para grandes quantidades (mais de 500 kg), empilhe sacos de sisal e intercale camadas de cinza entre eles.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Silos Metálicos de Baixo Custo (PICS)</h4>
+        <p>Os sacos PICS (Purdue Improved Crop Storage) são sacos de três camadas (dois plásticos + um externo de sisal) que criam um ambiente hermético dentro do saco. Os insectos morrem por falta de oxigênio sem necessidade de qualquer produto químico. Capacidade de 50 a 100 kg por saco. Custo: 3.000 a 8.000 Kz por saco. São reutilizáveis por 3 a 5 anos. Disponíveis em algumas cooperativas e lojas agrícolas de Luanda, Huambo e Benguela. O Ministério da Agricultura tem distribuído quantidades subsidiadas através de associações de produtores.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="subsecao">Armazenamento de Cebola e Alho</h3>
+
+  <p>A cura correcta após a colheita é fundamental para cebola e alho. Após arrancar, deixe as plantas com raízes intactas secando em linha no campo por 7 a 14 dias (se não houver chuva) ou num local ventilado e coberto. A pele externa deve ficar crocante e dourada. Depois, pendure em cachos ou tranças em local seco, ventilado e escuro — uma varanda coberta ou galpão funcionam perfeitamente. Com este método, a cebola pode durar 4 a 6 meses sem frigorífico; o alho pode durar 6 a 9 meses. Nunca armazene cebola ou alho em sacos fechados ou plástico — apodrecem rapidamente por acumulação de humidade.</p>
+
+  <h3 class="subsecao">Armazenamento de Hortícolas Frescas (Tomate, Pimento, Couve)</h3>
+
+  <p>Hortícolas frescas são o maior desafio — degradam-se rapidamente. Estratégias práticas para Angola sem electricidade contínua: <strong>Câmara de barro (zeer pot):</strong> Dois potes de barro de tamanhos diferentes, com areia húmida entre eles. A evaporação da areia húmida reduz a temperatura interna em 10 a 15°C em relação ao ambiente externo. Tomates duram 3 a 5 dias em vez de 1 a 2. Custo: zero (usando potes tradicionais). <strong>Colheita escalonada:</strong> em vez de colher tudo de uma vez, colha apenas o que consegue vender naquele dia. O campo é o melhor "frigorífico". <strong>Venda directa ao mercado:</strong> negociar com revendedores para buscar a produção directamente no campo elimina o transporte e o manuseio, reduzindo as perdas.</p>
+
+  <h3 class="subsecao">Construção de um Armazém Rural Simples</h3>
+
+  <p>Um armazém básico mas funcional pode ser construído com materiais locais por 200.000 a 500.000 Kz. Deve ter: paredes de adobe ou bloco de cimento, cobertura de zinco com ventilação por cima (ripas nas paredes altas para circulação de ar), chão de cimento elevado 30 cm acima do terreno (para evitar humidade ascendente), janelas pequenas com rede mosquiteira (ventilação sem entrada de insectos) e porta com fechadura. Dimensão mínima útil: 4m × 5m = 20 m² de área útil, suficiente para armazenar 5 a 10 toneladas de grãos. Este investimento é elegível para financiamento através do PRODESI e do FAN (Fundo de Apoio ao Crédito).</p>
+</div>
+</section>
+
+
+<!-- SECÇÃO 8: VENDA -->
+<section class="secao" id="s8">
+<div class="container">
+  <span class="secao-numero">08</span>
+  <span class="secao-label">Capítulo Oito</span>
+  <h2>Onde e Como Vender: Mercados Locais, Intermediários e Exportação</h2>
+
+  <p class="secao-intro">Produzir bem é metade do caminho. A outra metade é vender bem — no preço certo, para o comprador certo e no momento certo. O produtor que controla a sua venda multiplica o seu lucro.</p>
+
+  <p>A cadeia de comercialização agrícola em Angola tem vários elos, e cada elo que você elimina significa mais dinheiro no seu bolso. O intermediário (chambokeiro) compra barato e vende caro — às vezes ganhando mais que o produtor que trabalhou meses. Isso não significa que o intermediário seja sempre o inimigo: às vezes é a única opção viável. Mas o produtor deve conhecer todas as opções e escolher estrategicamente.</p>
+
+  <h3 class="subsecao">Canal 1: Venda no Portão da Machamba</h3>
+
+  <p>A forma mais simples, mas geralmente a menos rentável. O intermediário (chambokeiro) vem buscar ao produtor e paga um preço baixo, pois assume o risco e o custo do transporte. Recomendada apenas para: grandes volumes que não se consegue escoar de outra forma, produtores sem transporte em zonas rurais remotas e em épocas de abundância quando o mercado está saturado. Para melhorar o preço nesta modalidade, <strong>agrupe-se com outros produtores</strong> da sua zona e negociem juntos como grupo — um intermediário que compra 10 toneladas de uma vez paga melhor do que quem compra 500 kg.</p>
+
+  <h3 class="subsecao">Canal 2: Mercados Provinciais e Municipais</h3>
+
+  <p>Vender directamente no mercado municipal ou provincial é o melhor equilíbrio entre esforço e retorno para a maioria dos produtores. Os principais mercados por região são: <strong>Norte:</strong> Mercado do Uíge (cidade), Mercado de Malanje, Mercado de Nzeto. <strong>Centro:</strong> Mercado do Huambo (Rua Direita), Mercado de Kuito, Feiras do Lubango. <strong>Sul:</strong> Mercado Informal do Lubango, Feiras de Namibe. <strong>Leste:</strong> Mercados de Saurimo e Luena. <strong>Luanda:</strong> Mercado do Roque Santeiro (o maior de Angola), Mercado da Estalagem, Mercado do Kikolo, São Paulo, Cazenga. O aluguel de bancada nos mercados formais varia entre 5.000 e 30.000 Kz/mês dependendo da localização.</p>
+
+  <h3 class="subsecao">Canal 3: Supermercados e Hotéis</h3>
+
+  <p>Este canal paga os melhores preços — 30 a 80% acima dos preços do mercado informal — mas exige padrões de qualidade mais elevados e regularidade de fornecimento. Para entrar neste canal: <strong>Passo 1:</strong> Identifique os supermercados e hotéis da sua cidade. Em Luanda: Kero, Shoprite, Stop Fresh, Jumbo. No Huambo e Lubango: supermercados locais e hotéis de categoria. <strong>Passo 2:</strong> Vá pessoalmente ao responsável de compras (normalmente o gerente de piso ou director de F&B nos hotéis) com amostras dos seus produtos. <strong>Passo 3:</strong> Apresente-se como produtor local, destaque a frescura e ofereça um preço ligeiramente abaixo do fornecedor actual. <strong>Passo 4:</strong> Negocie prazos de pagamento claros (preferência por pagamento em 15 dias). <strong>Passo 5:</strong> Mantenha consistência — nunca falhe uma entrega. Uma empresa com 20 produtores organizados em cooperativa tem muito mais poder de negociação do que um produtor individual.</p>
+
+  <h3 class="subsecao">Canal 4: Venda Online e Redes Sociais</h3>
+
+  <p>Em Angola, o WhatsApp é o maior mercado virtual do país. Muitos produtores peri-urbanos de Luanda vendem directamente ao consumidor final através de grupos de WhatsApp, publicações no Facebook e no Instagram. Vantagens: elimina completamente o intermediário, o produtor recebe 100% do preço de retalho. Como começar: fotografe bem os seus produtos (boa iluminação, fundo limpo), crie um grupo "Hortaliças Frescas + nome da sua zona", partilhe fotos diárias da produção, defina um mínimo de encomenda (ex: caixa mista de 5 kg) e entregue ou organize pontos de recolha. Este canal é especialmente forte para produtos de valor acrescentado como legumes processados, polpa de tomate artesanal, pasta de amendoim e piri-piri seco.</p>
+
+  <h3 class="subsecao">Canal 5: Exportação — Como Começar</h3>
+
+  <p>A exportação é o sonho de muitos produtores e uma realidade para alguns. Angola exporta principalmente pimenta, café, cacau e mel. Mas há mercado crescente para amendoim, piri-piri seco, mandioca processada e frutas tropicais (banana, manga, abacate) para Portugal, Brasil e países da SADC (África do Sul, Namíbia, Zâmbia, RDC).</p>
+
+  <ul class="lista-custom">
+    <li><strong>Passo 1 — Constituição jurídica:</strong> Para exportar, precisa de empresa registada ou pertencer a uma cooperativa registada. O INAPEM (Instituto Nacional de Apoio às Micro, Pequenas e Médias Empresas) ajuda no registo com custos reduzidos para agricultores.</li>
+    <li><strong>Passo 2 — Certificado fitossanitário:</strong> Emitido pelo MINAGRI/IAGRI. Obrigatório para exportar produtos vegetais. Custo: 10.000 a 50.000 Kz dependendo do produto e destino.</li>
+    <li><strong>Passo 3 — Encontrar compradores:</strong> Contactar a Câmara de Comércio e Indústria de Angola (CCIA), participar na Feira Agro-pecuária e Industrial de Angola (FAIA), usar plataformas como TradeKey, Alibaba e o portal Africa AgriTrade.</li>
+    <li><strong>Passo 4 — Embalagem e apresentação:</strong> O produto para exportação precisa de embalagem adequada, rotulagem em português e no idioma do país de destino, e rastreabilidade (saber exactamente de que fazenda veio). Investir em embalagem diferencia o produto e justifica preços 2 a 3 vezes mais altos.</li>
+  </ul>
+
+  <div class="caso-real">
+    <span class="caso-real-badge">✦ Caso Real</span>
+    <h3>Cooperativa Kuinda Ngola — Produtores de Hortaliças, Viana, Luanda</h3>
+    <p>A cooperativa foi formada em 2019 por 12 produtores hortícolas de Viana e Cacuaco que estavam a vender individualmente ao Roque Santeiro por preços baixos. Unidos, passaram a ter volume suficiente para negociar directamente com dois supermercados Stop Fresh em Luanda, entregando semanalmente um mix de tomate, couve, pimento e cebola.</p>
+    <p>Em 2022, com apoio do PRODESI, a cooperativa adquiriu uma câmara de frio portátil (contentor adaptado) e um caminhão de 3 toneladas, reduzindo as perdas pós-colheita de 35% para menos de 8% e cortando os custos de transporte em 40%. Em 2023, iniciaram fornecimento a um hotel internacional em Luanda, passando a receber preços 60% superiores ao mercado grossista.</p>
+    <div class="caso-real-numeros">
+      <div class="caso-num"><strong>12</strong><span>produtores unidos</span></div>
+      <div class="caso-num"><strong>−27%</strong><span>perdas reduzidas</span></div>
+      <div class="caso-num"><strong>+60%</strong><span>preço ao hotel</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- SECÇÃO 9: GOVERNO -->
+<section class="secao" id="s9">
+<div class="container">
+  <span class="secao-numero">09</span>
+  <span class="secao-label">Capítulo Nove</span>
+  <h2>Programas do Governo Angolano — Como Aceder</h2>
+
+  <p class="secao-intro">O governo angolano tem vários programas de apoio à agricultura familiar. A maioria dos produtores não os conhece ou não sabe como aceder. Aqui está um guia prático para aproveitar estes recursos que existem para si.</p>
+
+  <p>Desde o PDN 2018–2022 (Plano de Desenvolvimento Nacional) e a sua continuação no PDN 2023–2027, o governo angolano tem investido significativamente na diversificação económica através da agricultura. Vários programas e fundos foram criados especificamente para o pequeno e médio produtor. O problema principal é a falta de informação e a burocracia — mas com os passos certos, é possível aceder a crédito, insumos subsidiados, capacitação técnica e apoio ao mercado.</p>
+
+  <h3 class="subsecao">1. PRODESI — Programa de Apoio à Produção, Diversificação das Exportações e Substituição das Importações</h3>
+
+  <p>O PRODESI é o principal programa do governo para estimular a produção agrícola local. Oferece: acesso a crédito agrícola com juros subsidiados (entre 5 e 12% ao ano, contra os 20–30% dos bancos comerciais), insumos agrícolas (sementes, fertilizantes, pesticidas) a preços subsidiados, apoio técnico através de extensionistas agrícolas, e facilidade de escoamento da produção através dos mercados CASA (Comercialização Agrícola Segura e Acessível).</p>
+
+  <p><strong>Como aceder ao PRODESI:</strong></p>
+  <ul class="lista-custom">
+    <li><strong>Passo 1:</strong> Dirija-se à Delegação Provincial do MINAGRIF (Ministério da Agricultura, Floresta e Desenvolvimento Rural) da sua província. Cada capital provincial tem uma delegação.</li>
+    <li><strong>Passo 2:</strong> Solicite inscrição no cadastro de produtores familiares. Documentos necessários: BI (Bilhete de Identidade), comprovativo de posse ou uso da terra (pode ser declaração da soba ou do administrador comunal), e um plano simplificado de produção (o técnico do MINAGRIF pode ajudá-lo a preparar).</li>
+    <li><strong>Passo 3:</strong> Após cadastro, terá acesso prioritário a kits de insumos subsidiados no início de cada época agrícola (geralmente Setembro–Outubro).</li>
+  </ul>
+
+  <h3 class="subsecao">2. FAN — Fundo de Apoio ao Crédito Agrícola</h3>
+
+  <p>O FAN canaliza crédito através de bancos parceiros (BDA — Banco de Desenvolvimento de Angola, BCI, Banco Keve) para produtores agrícolas registados. As linhas de crédito disponíveis incluem: crédito de campanha (para compra de insumos e custeio da produção, reembolso após colheita), crédito de investimento (para compra de equipamentos, construção de armazéns, sistemas de irrigação — prazo de 3 a 5 anos) e crédito para cooperativas (valores maiores, condições mais favoráveis para grupos organizados).</p>
+
+  <p><strong>Documentação necessária para crédito FAN:</strong> BI ou passaporte, cadastro no MINAGRIF, posse ou arrendamento da terra documentado, plano de negócios agrícola (o BDA tem formulários simplificados), extracto bancário de 6 meses (conta simples de poupança é suficiente), e declaração da Soba ou Administrador confirmando o uso da terra. Processo de aprovação: 15 a 45 dias úteis. Valor máximo para pequeno produtor individual: até 5 milhões de Kz. Para cooperativas: até 50 milhões de Kz.</p>
+
+  <h3 class="subsecao">3. Mercados CASA — Comercialização Agrícola Segura e Acessível</h3>
+
+  <p>Os mercados CASA são infra-estruturas construídas pelo governo para facilitar a venda directa do produtor ao consumidor, eliminando intermediários. Existem mercados CASA em todas as províncias angolanas. O produtor cadastrado no MINAGRIF pode solicitar uma bancada nos mercados CASA a preços de aluguel inferiores aos do mercado privado. Vantagem adicional: os mercados CASA têm estrutura de câmara de frio básica em algumas localidades, permitindo armazenamento temporário da produção.</p>
+
+  <h3 class="subsecao">4. INAPEM — Apoio ao Empreendedorismo Agrícola</h3>
+
+  <p>O Instituto Nacional de Apoio às Micro, Pequenas e Médias Empresas oferece: capacitação em gestão de negócios e empreendedorismo (cursos gratuitos de 5 a 20 dias), apoio ao registo de empresas e cooperativas (com taxa reduzida para o sector agrícola), incubação de negócios agrícolas inovadores, e ligação a redes de compradores e exportadores. Contacto: escritórios em todas as províncias. Em Luanda: Avenida Comandante Gika, Maianga.</p>
+
+  <h3 class="subsecao">5. FAO Angola e Parceiros Internacionais</h3>
+
+  <p>A Organização das Nações Unidas para a Alimentação e Agricultura (FAO) tem presença activa em Angola e implementa programas em parceria com o governo que chegam directamente ao produtor. Programas actuais incluem: distribuição de sementes certificadas (através das extensões rurais do MINAGRIF), formação em controlo biológico de pragas (especialmente contra a lagarta-do-cartucho), apoio à formação de grupos de camponeses e escolas de campo (Farmer Field Schools), e instalação de sistemas de irrigação subsidiados em zonas prioritárias. Para saber que programas estão activos na sua província, contacte: a delegação do MINAGRIF mais próxima, o Instituto de Desenvolvimento Agrário (IDA) local, ou o Escritório da FAO Angola em Luanda (+244 222 395 437).</p>
+
+  <div class="destaque-box">
+    <h3>O Conselho mais Importante deste Guia</h3>
+    <p>Nenhum programa do governo ou técnica agrícola substitui a determinação e a organização do próprio produtor. Os produtores angolanos que mais cresceram nas últimas décadas têm em comum três coisas: <strong>associaram-se</strong> (cooperativa, associação, grupo informal), <strong>registaram-se</strong> (formalizaram a sua actividade, mesmo que de forma básica) e <strong>diversificaram</strong> (não dependem de uma só cultura ou de um só canal de venda). A terra angolana é rica. O mercado angolano precisa do que você produz. O conhecimento está aqui. O passo seguinte é seu.</p>
+  </div>
+
+  <div class="caso-real">
+    <span class="caso-real-badge">✦ Caso Real</span>
+    <h3>Associação Kimbanguistas de Produtores — Malanje</h3>
+    <p>Esta associação de 23 produtores familiares da zona periurbana de Malanje conseguiu, em 2021, através do PRODESI, um lote de sementes de tomate e feijão melhoradas, formação em gestão de pragas e acesso a uma bancada no novo mercado CASA de Malanje. No primeiro ano, venderam directamente ao consumidor final sem intermediário.</p>
+    <p>Em 2022, com lucros acumulados e crédito do FAN (8 milhões de Kz a 8% ao ano), construíram um armazém colectivo de 60 m² com área de secagem coberta. As perdas pós-colheita caíram de 42% para menos de 12%. Em 2024, a associação era o maior fornecedor de tomate fresco do mercado municipal de Malanje, com facturação colectiva superior a 80 milhões de Kz/ano.</p>
+    <div class="caso-real-numeros">
+      <div class="caso-num"><strong>23</strong><span>produtores</span></div>
+      <div class="caso-num"><strong>80 M Kz</strong><span>facturação anual</span></div>
+      <div class="caso-num"><strong>−30%</strong><span>perdas reduzidas</span></div>
+    </div>
+  </div>
 
 </div>
 </section>
-<div class="card stats" id="stats">
-    <h2>📊 Resultados dos Criadores</h2>
 
-    <div class="stat">
-        <h3><span class="counter" data-target="87">0</span>%</h3>
-        <p>Aumento médio na produção (%)</p>
-    </div>
 
-    <div class="stat">
-        <h3 class="counter" data-target="9">0</h3>
-        <p>Criadores em cada 10 têm resultados</p>
-    </div>
-
-    <div class="stat">
-        <h3 class="counter" data-target="120">0</h3>
-        <p>Criadores que já aplicaram</p>
-    </div>
-</div>
-<section class="section">
-<div class="cta">
-<h2>🔥 Oferta por tempo limitado</h2>
-<p>Garanta agora e comece a aplicar hoje mesmo</p>
-<button onclick="window.open('https://wa.me/244959622160')">QUERO MEU LIVRO AGORA</button>
-</div>
-</section><a class="whatsapp" href="https://wa.me/244959622160">💬</a>
-<div class="card">
-<h2>❓ Perguntas Frequentes</h2>
-
-<p><strong>Como recebo o material?</strong><br>Após pagamento, envio imediato no WhatsApp.</p>
-
-<p><strong>Funciona para iniciantes?</strong><br>Sim, foi feito para quem está começando.</p>
-
-<p><strong>Preciso de experiência?</strong><br>Não, o método é passo a passo.</p>
-</div>
-<div class="card">
-<h2>👤 Sobre o Autor</h2>
-<p>Especialista em produção animal, ajudando criadores a aumentarem seus lucros com métodos práticos e comprovados.</p>
-</div>
-<div class="card final-cta">
-    <h2>🚀 Comece hoje mesmo</h2>
-    <p>Não perca mais tempo e dinheiro. Comece agora a transformar sua produção.</p>
-
-    <a href="https://wa.me/244959622160" class="btn-whatsapp">
-        📲 Falar no WhatsApp
-    </a>
-</div>
 <footer>
-<p>© 2026 CyberSev Solução Digital</p>
-<p>Site criado por João Sacassole</p>
-<p>Contato do Dev: 934919736</p>
+  <div class="container">
+    <p style="font-family: 'Playfair Display', serif; font-size: 24px; color: rgba(255,255,255,0.3); margin-bottom: 16px;">Guia Prático de Agricultura para o Produtor Angolano</p>
+    <p>Este guia foi elaborado com base em experiência de campo, dados de mercado angolano (2023–2024) e informações públicas<br>do MINAGRIF, FAO Angola, PRODESI e FAN. Os valores em Kwanzas são estimativas de referência sujeitas a variação de mercado.</p>
+    <p style="margin-top: 20px; color: rgba(255,255,255,0.25); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Angola · 2026 · CyberSev Solução Digital· Transformando vidas</p>
+  </div>
 </footer>
-<script>
-const audios = document.querySelectorAll(".audios audio");
 
-audios.forEach((audio, index) => {
-
-    // Quando um tocar → parar os outros
-    audio.addEventListener("play", () => {
-        audios.forEach(other => {
-            if (other !== audio) {
-                other.pause();
-                other.currentTime = 0;
-            }
-        });
-    });
-
-    // Quando terminar → tocar o próximo
-    audio.addEventListener("ended", () => {
-        if (index + 1 < audios.length) {
-            audios[index + 1].play();
-        }
-    });
-
-});
-
-const counters = document.querySelectorAll('.counter');
-let started = false;
-
-function startCounting() {
-    counters.forEach(counter => {
-        const update = () => {
-            const target = +counter.getAttribute('data-target');
-            const current = +counter.innerText;
-
-            const increment = target / 50;
-
-            if (current < target) {
-                counter.innerText = Math.ceil(current + increment);
-                setTimeout(update, 30);
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        update();
-    });
-}
-
-// Detectar quando aparece na tela
-window.addEventListener('scroll', () => {
-    const section = document.getElementById('stats');
-    const position = section.getBoundingClientRect().top;
-    const screen = window.innerHeight;
-
-    if (position < screen && !started) {
-        started = true;
-        startCounting();
-    }
-});
-
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-</script>
 </body>
 </html>
